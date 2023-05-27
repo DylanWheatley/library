@@ -105,11 +105,17 @@ table {
 }
 
 
-#adder {
-	margin-top: 10px;
+
+
+.style {
+	border: var(--border-var);
+	padding: 50px;
 }
 
-.btnTest {
-	margin-top: 10px;
-	margin-right: 10px;
+#bookTitle {
+	margin-right: 15px;
+}
+
+.error {
+	border-color: red;
 }

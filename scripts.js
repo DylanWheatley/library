@@ -1,7 +1,9 @@
 const adderBtn = document.querySelector('#adder');
-const testBtn = document.querySelector('.btnTest');
 const gridCon = document.querySelector('.grid-container');
+let addTitle;
 let bookGrid;
+let testTitle;
+let titleText = document.querySelector('#bookTitle');
 
 
 
@@ -50,6 +52,7 @@ function displayBooks() {
         
         bookGrid = document.createElement('div');
         bookGrid.classList.add(bookNum);
+        bookGrid.classList.add('style');
         bookGrid.textContent = myLibrary[i].title;
 
 
@@ -68,9 +71,27 @@ function displayBooks() {
     }
 
 
-adderBtn.addEventListener('click', displayBooks);
-testBtn.addEventListener('click', () => {
-    myLibrary[3] = harryP;
+
+adderBtn.addEventListener('click', () => {
+
+
+    addTitle = titleText.value;
+
+    if (addTitle === "") {
+        titleText.classList.add("error");
+        return myLibrary;
+    }
+
+    else {
+
+    titleText.classList.remove("error");
+    const newBook = new Book(addTitle, "Name", 1, true);
+    myLibrary.push(newBook);
+    displayBooks();
+    titleText.value = "";
+    return myLibrary;
+    }
+
 });
 
 displayBooks();
