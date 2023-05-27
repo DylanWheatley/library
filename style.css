@@ -50,5 +50,66 @@ table {
 }
 
 
+
+
+
+
+
+
 /* START HERE */
 
+:root {
+	--border-var: 1px solid black;
+}
+
+.container {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+.header {
+	width: 100%;
+	height: 20%;
+	border: var(--border-var);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: white;
+
+}
+
+.grid-container {
+	border: var(--border-var);
+	width: 80%;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: white;
+
+}
+/* 
+.test {
+	border: var(--border-var);
+	width: 100%;
+	height: 5em;
+} */
+
+.title {
+	width: 100%;
+}
+
+
+#adder {
+	margin-top: 10px;
+}
+
+.btnTest {
+	margin-top: 10px;
+	margin-right: 10px;
+}
